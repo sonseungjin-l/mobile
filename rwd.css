@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url("./webfont.css");
+/*초기화*/
+html{font-size: 10px;}
+*{box-sizing:border-box;}
+body, h1, h2, h3, p, ul, figure{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none;}
+address{font-style: normal;}
+.hidden{position: absolute; width: 1px; height: 1px; margin: -1px;
+overflow: hidden; clip:rect(0,0,0,0);}
+/*웹폰트*/
+/*데스크탑 버전 1200 이상 */ 
+body{width: 960px; margin: 8px auto 0;
+    border: 1px solid #e7e7e7;
+    background: linear-gradient(180deg, #87ceeb #fff) repeat-x;
+    font-size: 2rem; font-family: 'NanumSquareNeo';
+    border: 1px solid #e7e7e7;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#header{width: 100%; height: 280px; background: url(./images/bg_header.png) no-repeat center center / cover;}
+#header h1 {padding: 40px 0 0 20px; color: #ff0; 
+    font-size: 3em; font-family: 'NanumSquareNeoHeavy';
+    }
+#gnb{width: 100%;}   
+#gnb ul{display: flex;}
+#gnb ul li{width: 25%; }
+#gnb ul li a{display: block; line-height: 60px; text-align: center;
+            background: #060; color:#fff;
+            font-family: 'NanumSquareNeoBold';
+        }
+        #gnb ul li a:hover{background: #fff; color: #060;}
+#main{width: 740px; background: #fff;}
+#content{padding: 30px 10px;}
+#content article h3{margin: 15px 0;}
+#content article p{margin-bottom: 15px;}
+#photo{width: 218px; background: green;}
+#photo figure{display: flex;height: 100%; flex-direction: column;
+             align-items: center; justify-content: center;
+            row-gap: 10px;}
+#photo figure img{width: 200px; border: 1px solid #ccc;}
+
+#footer{width: 100%;padding: 30px 0; background: #061f1f; color: white;
+text-align: center;}
+#footer address{margin-bottom: 15px;}
+
+/*태블릿 기존 or 600-1023 */
+@media screen and (max-width: 1023px){
+    body{width: 100%;}
+    main{width: 100%;}
+    #photo{width: 100%;}
+    #photo figure{flex-direction: row;
+        justify-content: space-evenly;
+        column-gap: 10px;}
+    #photo figure img{width: 25%;}    
+}
+/* 599 이하 모바일 */
+@media screen and (max-width: 599px){
+    body{margin: 0%; border: 0; background: none;}
+    #header{height: 75px; background: #061f1f; color: yellow;}
+    #header h1{padding-top:15px; font-size: 3rem;}
+    #gnb{}
+    #gnb ul{display: block; margin: 14px 20px 0;}
+    #gnb ul li{width: auto; margin-bottom: 10px;}
+    #gnb ul li a{border: 1px solid #ccc;border-radius: 10px;
+          background: #fff; color: gray;} 
+    #photo figure{flex-direction: column;}   
+    #photo figure img {width: 80%;}
+}
+
+
