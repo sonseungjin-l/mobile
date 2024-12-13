@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형rwd</title>
+    <style>
+        /* @media all and(min-width:1201px) and(max-width:1599px){
+            bodya{background: #628e95;}
+        } */
+        body{background: #628e95;}
+        div{text-align: center;}
+            h1{font-size: 5em; color: #fff;}
+            p{font-size: 3em;}
+        /*1200 이하 
+        @media all and (max-width: 1200px) {
+            body{background: #72ef8d;}
+        }
+        /*1600 이상 
+        @media all and (min-width: 1600px){
+            body{background: #555;}
+        } */
+
+        /* ex) 태블릿 1200이하 */
+        @media all and (max-width: 1200px) {
+            body{background: #a47493;}
+            h1{font-size: 3em;}
+            p{font-size: 2em;}
+            img{width: 80%;}
+        }
+/* ex) 스마트폰 599 이하*/
+        @media all and (max-width: 599px) {
+            body{background: #a9b577;}
+            div{text-align: left;}
+            img{width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>제목</h1>
+        <p>내용내용</p>
+        <img src="./pattern-9225925_1280.jpg" alt="">
+    </div>
+</body>
+</html>
